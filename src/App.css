@@ -6,19 +6,17 @@ document body
 
 body{
   background: #292C35;
+  margin: 0;
+  padding: 0;
 }
 
 /* app body */
 
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-} */
 
 /* header section */
 
@@ -29,7 +27,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white;
 }
 
@@ -42,6 +40,7 @@ body{
 #data-body{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -53,36 +52,97 @@ body{
  margin-bottom: 40px;
  padding-top: 3px;
  padding-bottom: 3px;
-
 }
 
 
 
-button {
+/* button {
   background: #3F51B5;
   border: none;
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
   margin-left: 4px;
   font-weight: bold;
-}
+  font-size: 10px;
+  width: 70px;
+} */
 
 input[type="search"]{
   font-weight: 100;
-  color: slategrey;
   border: none;
 }
 
+
+input[type="submit"]{
+  font-weight: 500;
+  background: #3F51B5;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: 4px;
+  border: none;
+}
 
 
 /* table section */
 
 .table{
   background: white;
-  width: 80vw;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 thead{
   background: #FFB563;
 }
 
+th,td{
+  min-width: 130px;
+}
+
+@media only screen and (min-width: 576px){
+
+  .table {
+    width: 50px;
+    font-size: 5px;
+  }
+
+  th,td{
+    min-width: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #data-body{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  input[type="search"]{
+    width: 67%;
+  }
+
+  .table {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  th,td{
+    min-width: 50px;
+  }
+}
+
+  @media only screen and (min-width: 992px){
+    #data-body{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .table {
+      width: 100%;
+      font-size: 10px;
+    }
+  
+    th,td{
+      min-width: 50px;
+    }
+  }

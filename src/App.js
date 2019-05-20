@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSmile } from '@fortawesome/free-solid-svg-icons';
-import { FastLoader } from 'react-spinners';
+import { faSmile, faSadCry, faSadTear } from '@fortawesome/free-solid-svg-icons';
+import Loader from 'react-loader-spinner';
+// import { FastLoader } from 'react-spinners';
 
 // import Spinner from './components/Spinner';
 
@@ -10,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const smile = <FontAwesomeIcon icon ={faSmile} className="smile"/> 
+const sad = <FontAwesomeIcon icon ={faSadTear} className="smile"/> 
 
 // function Spinner(props) {
 //     return (
@@ -33,6 +35,7 @@ function App() {
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [loader, setLoading] =useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   async function getData(){
     try {
@@ -65,6 +68,7 @@ function App() {
         onSubmit={(e) => {
            e.preventDefault();
            setLoading(true);
+           setSubmitted(true)
            setTimeout(() => {
             if (inputValue === '') {
               setMeteors(data);
@@ -79,9 +83,11 @@ function App() {
               }
               else{
                 console.log("doesn't exist")
+                setMeteors([]);
+                setLoading(false);
               }
             }
-           }, 2000);
+           }, 3000);
         }}
       >
         <input 
@@ -96,13 +102,14 @@ function App() {
       <section className="data-window">
         {
         loader ? 
-        // <p style={{color: "white"}}>Texting</p>
-        <FastLoader
-          sizeUnit="px"
-          size={50}
-          color="#01C4A7"
-          loading={loader}
-        /> 
+        <div id="spinner">
+           <Loader 
+            type="ThreeDots"
+            color="white"
+            height="100"	
+            width="100"
+         />
+        </div>
         :
           meteors.length !== 0 ? 
            (
@@ -145,12 +152,24 @@ function App() {
           </Table>
            )
           :
+          inputValue === '' || submitted === false ?
           (
             <div id="no-data-message">
-              <p> {smile} 
+              <p> 
+                {smile} 
                  <span>
                  Please search a meteor landing by name 
                  or simply click search to list all landings
+                 </span>
+              </p>
+            </div>
+          ) :
+          (
+            <div id="no-data-message">
+              <p> 
+                {sad} 
+                 <span>
+                 Please confirm your meteor query
                  </span>
               </p>
             </div>

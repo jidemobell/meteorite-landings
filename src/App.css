@@ -169,3 +169,8 @@ th,td{
     flex-direction: row;
     align-items: center;
   }
+
+  #spinner{
+   opacity: 0.5;
+    margin-top: 100px;
+  }

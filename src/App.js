@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSmile } from '@fortawesome/free-solid-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+const smile = <FontAwesomeIcon icon ={faSmile} className="smile"/> 
 
 function App() {
   const url = "https://data.nasa.gov/resource/gh4g-9sfh.json";
   const [meteors, setMeteors] = useState([]);
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  // const [firstLoad, setFirstLoad] = useState(false);
 
   async function getData(){
     try {
@@ -22,13 +27,11 @@ function App() {
 
   // only fetch once and not at every update
   useEffect(() => {
-      getData();
-  }, []);     
+      getData()
+  }, []);  
+  
 
-  // function handleFetch(e) {
-  //   e.preventDefault();
-  //   console.log("input value now", inputValue)
-  // }
+
 
   return (
     <div className="App">
@@ -44,6 +47,11 @@ function App() {
            e.preventDefault();
            if (inputValue === '') {
              setMeteors(data);
+           } else {
+             let tempData = data.filter(item => {
+               return item.name === inputValue
+             })
+             setMeteors(tempData);
            }
         }}
       >
@@ -98,7 +106,17 @@ function App() {
             </tbody>
           </Table>
            )
-          : ''
+          :
+          (
+            <div id="no-data-message">
+              <p> {smile} 
+                 <span>
+                 Please search a meteor landing by name 
+                 or simply click search to list all landings
+                 </span>
+              </p>
+            </div>
+          )
         }
       </section>
       </section>

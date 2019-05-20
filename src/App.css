@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 /*
 document body
 */
@@ -145,4 +146,26 @@ th,td{
     th,td{
       min-width: 50px;
     }
+  }
+
+
+  /* no data messages */
+  #no-data-message{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-top: 100px;
+    opacity: 0.4;
+    text-align: center;
+  }
+
+  .smile{
+    font-size: 40px;
+    margin-right: 10px
+  }
+
+  #no-data-message p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }

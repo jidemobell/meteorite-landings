@@ -7,6 +7,7 @@ import Loader from 'react-loader-spinner';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { validate } from '@babel/types';
 
 const smile = <FontAwesomeIcon icon ={faSmile} className="smile"/> 
 const sad = <FontAwesomeIcon icon ={faSadTear} className="smile"/> 
@@ -60,7 +61,8 @@ function App() {
               setLoading(false);
             } else {
               let tempData = data.filter(item => {
-                return item.name === inputValue
+                let val = inputValue.slice(0,1).toUpperCase() + inputValue.slice(1)
+                return item.name === val
               })
               if(tempData.length !== 0){
                setMeteors(tempData);

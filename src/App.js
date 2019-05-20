@@ -2,18 +2,37 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile } from '@fortawesome/free-solid-svg-icons';
+import { FastLoader } from 'react-spinners';
+
+// import Spinner from './components/Spinner';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const smile = <FontAwesomeIcon icon ={faSmile} className="smile"/> 
 
+// function Spinner(props) {
+//     return (
+//       <div className="sweet-loading" style={{ marginTop: "100px" }}>
+//         <FastLoader
+//           sizeUnit="px"
+//           size={50}
+//           color="#01C4A7"
+//           loading={props.loading}
+//         />
+//       </div>
+//     );
+// }
+
+
+
+
 function App() {
   const url = "https://data.nasa.gov/resource/gh4g-9sfh.json";
   const [meteors, setMeteors] = useState([]);
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
-  // const [firstLoad, setFirstLoad] = useState(false);
+  const [loader, setLoading] =useState(false);
 
   async function getData(){
     try {
@@ -45,14 +64,24 @@ function App() {
         className="search-wrapper"
         onSubmit={(e) => {
            e.preventDefault();
-           if (inputValue === '') {
-             setMeteors(data);
-           } else {
-             let tempData = data.filter(item => {
-               return item.name === inputValue
-             })
-             setMeteors(tempData);
-           }
+           setLoading(true);
+           setTimeout(() => {
+            if (inputValue === '') {
+              setMeteors(data);
+              setLoading(false);
+            } else {
+              let tempData = data.filter(item => {
+                return item.name === inputValue
+              })
+              if(tempData.length !== 0){
+               setMeteors(tempData);
+               setLoading(false);
+              }
+              else{
+                console.log("doesn't exist")
+              }
+            }
+           }, 2000);
         }}
       >
         <input 
@@ -66,6 +95,15 @@ function App() {
       </form>
       <section className="data-window">
         {
+        loader ? 
+        // <p style={{color: "white"}}>Texting</p>
+        <FastLoader
+          sizeUnit="px"
+          size={50}
+          color="#01C4A7"
+          loading={loader}
+        /> 
+        :
           meteors.length !== 0 ? 
            (
             <Table bordered striped className="table">

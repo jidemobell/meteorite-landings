@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSmile, faSadCry, faSadTear } from '@fortawesome/free-solid-svg-icons';
+import { faSmile, faSadTear } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loader-spinner';
 
 

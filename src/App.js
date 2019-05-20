@@ -3,28 +3,13 @@ import { Table } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faSadCry, faSadTear } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loader-spinner';
-// import { FastLoader } from 'react-spinners';
 
-// import Spinner from './components/Spinner';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const smile = <FontAwesomeIcon icon ={faSmile} className="smile"/> 
 const sad = <FontAwesomeIcon icon ={faSadTear} className="smile"/> 
-
-// function Spinner(props) {
-//     return (
-//       <div className="sweet-loading" style={{ marginTop: "100px" }}>
-//         <FastLoader
-//           sizeUnit="px"
-//           size={50}
-//           color="#01C4A7"
-//           loading={props.loading}
-//         />
-//       </div>
-//     );
-// }
 
 
 

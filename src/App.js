@@ -7,7 +7,6 @@ import Loader from 'react-loader-spinner';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { validate } from '@babel/types';
 
 const smile = <FontAwesomeIcon icon ={faSmile} className="smile"/> 
 const sad = <FontAwesomeIcon icon ={faSadTear} className="smile"/> 

@@ -1,7 +1,9 @@
 {
-  "name": "meteor-finder",
+  "name": "meteor-landings",
   "version": "0.1.0",
   "author": "jide olaniyan",
+  "main":"index.js",
+  "homepage": "https://jidemobell.github.io/meteor-landings",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jidemobell/meteorite-landings.git"

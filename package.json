@@ -1,6 +1,11 @@
 {
-  "name": "voyage-prework",
+  "name": "meteor-finder",
   "version": "0.1.0",
+  "author": "jide olaniyan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jidemobell/meteorite-landings.git"
+  },
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",
@@ -70,7 +75,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -140,6 +146,7 @@
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
+    "gh-pages": "^2.0.1",
     "react-test-renderer": "^16.8.6"
   }
 }

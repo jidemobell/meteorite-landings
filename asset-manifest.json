@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/meteor-landings/static/css/main.4f06a95c.chunk.css",
-    "main.js": "/meteor-landings/static/js/main.165eae66.chunk.js",
-    "main.js.map": "/meteor-landings/static/js/main.165eae66.chunk.js.map",
-    "runtime~main.js": "/meteor-landings/static/js/runtime~main.fe0942f2.js",
-    "runtime~main.js.map": "/meteor-landings/static/js/runtime~main.fe0942f2.js.map",
-    "static/css/2.77155d0b.chunk.css": "/meteor-landings/static/css/2.77155d0b.chunk.css",
-    "static/js/2.ea313fbf.chunk.js": "/meteor-landings/static/js/2.ea313fbf.chunk.js",
-    "static/js/2.ea313fbf.chunk.js.map": "/meteor-landings/static/js/2.ea313fbf.chunk.js.map",
-    "index.html": "/meteor-landings/index.html",
-    "precache-manifest.92f4569715087914aa621642d2658b78.js": "/meteor-landings/precache-manifest.92f4569715087914aa621642d2658b78.js",
-    "service-worker.js": "/meteor-landings/service-worker.js",
-    "static/css/2.77155d0b.chunk.css.map": "/meteor-landings/static/css/2.77155d0b.chunk.css.map",
-    "static/css/main.4f06a95c.chunk.css.map": "/meteor-landings/static/css/main.4f06a95c.chunk.css.map"
+    "main.css": "/meteorite-landings/static/css/main.4f06a95c.chunk.css",
+    "main.js": "/meteorite-landings/static/js/main.391f2669.chunk.js",
+    "main.js.map": "/meteorite-landings/static/js/main.391f2669.chunk.js.map",
+    "runtime~main.js": "/meteorite-landings/static/js/runtime~main.2b8d44a1.js",
+    "runtime~main.js.map": "/meteorite-landings/static/js/runtime~main.2b8d44a1.js.map",
+    "static/css/2.77155d0b.chunk.css": "/meteorite-landings/static/css/2.77155d0b.chunk.css",
+    "static/js/2.ea313fbf.chunk.js": "/meteorite-landings/static/js/2.ea313fbf.chunk.js",
+    "static/js/2.ea313fbf.chunk.js.map": "/meteorite-landings/static/js/2.ea313fbf.chunk.js.map",
+    "index.html": "/meteorite-landings/index.html",
+    "precache-manifest.cb9cbb815f28a7095729919f4722eff8.js": "/meteorite-landings/precache-manifest.cb9cbb815f28a7095729919f4722eff8.js",
+    "service-worker.js": "/meteorite-landings/service-worker.js",
+    "static/css/2.77155d0b.chunk.css.map": "/meteorite-landings/static/css/2.77155d0b.chunk.css.map",
+    "static/css/main.4f06a95c.chunk.css.map": "/meteorite-landings/static/css/main.4f06a95c.chunk.css.map"
   }
 }

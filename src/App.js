@@ -83,7 +83,7 @@ function App() {
           onChange={(e) => setInputValue(e.target.value)}
         />
         {/* <button>SEARCH</button> */}
-        <input type="submit" value="SEARCH"/>
+        <input type="submit" value="SEARCH" className="enter" />
       </form>
       <section className="data-window">
         {
@@ -140,10 +140,10 @@ function App() {
           :
           inputValue === '' || submitted === false ?
           (
-            <div id="no-data-message">
+            <div id="no-data-message" className="message-one">
               <p> 
                 {smile} 
-                 <span>
+                 <span className="initial">
                  Please search a meteor landing by name 
                  or simply click search to list all landings
                  </span>
@@ -151,10 +151,10 @@ function App() {
             </div>
           ) :
           (
-            <div id="no-data-message">
+            <div id="no-data-message" className="message-two">
               <p> 
                 {sad} 
-                 <span>
+                 <span className="flashed">
                  Please confirm your meteor query
                  </span>
               </p>

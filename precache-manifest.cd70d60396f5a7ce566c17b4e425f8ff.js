@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "50b32e9af43ad563df90ab84cac34d3d",
+    "revision": "3d7fcb1c5304b976381ba9ec99695dd7",
     "url": "/meteorite-landings/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meteorite-landings/static/css/2.77155d0b.chunk.css"
   },
   {
-    "revision": "e10cedfddb9a69a93f18",
+    "revision": "a9413a61c7cb4798ea85",
     "url": "/meteorite-landings/static/css/main.4f06a95c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meteorite-landings/static/js/2.ea313fbf.chunk.js"
   },
   {
-    "revision": "e10cedfddb9a69a93f18",
-    "url": "/meteorite-landings/static/js/main.391f2669.chunk.js"
+    "revision": "a9413a61c7cb4798ea85",
+    "url": "/meteorite-landings/static/js/main.65ce668d.chunk.js"
   },
   {
     "revision": "aa910d6c5098668b908b",

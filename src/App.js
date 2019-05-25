@@ -51,24 +51,21 @@ function App() {
       <form 
         className="search-wrapper"
         onSubmit={(e) => {
-           e.preventDefault();
-           setLoading(true);
-           setSubmitted(true)
+           e.preventDefault(); setLoading(true); setSubmitted(true)
            setTimeout(() => {
             if (inputValue === '') {
               setMeteors(data);
               setLoading(false);
             } else {
               let tempData = data.filter(item => {
-                let val = inputValue.slice(0,1).toUpperCase() + inputValue.slice(1)
-                return item.name === val
+                let re = new RegExp(`^${inputValue}`, 'i')
+                return item.name.toLowerCase() === inputValue.toLowerCase() || re.test(item.name.toLowerCase())
               })
               if(tempData.length !== 0){
                setMeteors(tempData);
                setLoading(false);
               }
               else{
-                console.log("doesn't exist")
                 setMeteors([]);
                 setLoading(false);
               }
@@ -82,7 +79,6 @@ function App() {
           defaultValue={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        {/* <button>SEARCH</button> */}
         <input type="submit" value="SEARCH" className="enter" />
       </form>
       <section className="data-window">

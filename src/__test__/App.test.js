@@ -7,32 +7,8 @@ configure({ adapter: new Adapter() });
 import React from 'React';
 import { shallow, mount, render } from 'enzyme';
 import ReactDOM from 'react-dom';
-// import {act} from 'react-dom/test-utils';
 import App from '../App';
 
-
-
-
-// let container;
-
-// beforeEach(() => {
-//     container = document.createElement('div');
-//     document.body.appendChild(container);
-// });
-
-// afterEach(() => {
-//     document.body.removeChild(container);
-//     container = null;
-// })
-
-// it('can render a table ', ()=> {
-//     act(() => {
-//         ReactDOM.render(<App />, container);
-//         const button = container.querySelector('.enter');
-
-//         expect(button.hasAttribute("value")).toBe(true);
-//     })
-// })
 
 let container;
 
